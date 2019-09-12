@@ -1,0 +1,209 @@
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop
+$ cd PPMToolFullStackReact+Java/
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java
+$ ls
+PPMToolFullStack/
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java
+$ git init
+Initialized empty Git repository in C:/Users/Kartike Dutta/Desktop/PPMToolFullStackReact+Java/.git/
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (master)
+$ git add .
+warning: LF will be replaced by CRLF in PPMToolFullStack/.gitignore.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in PPMToolFullStack/.mvn/wrapper/MavenWrapperDownloader.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in PPMToolFullStack/.mvn/wrapper/maven-wrapper.properties.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in PPMToolFullStack/mvnw.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in PPMToolFullStack/mvnw.cmd.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in PPMToolFullStack/pom.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/PpmtoolApplication.java.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in PPMToolFullStack/src/main/resources/application.properties.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in PPMToolFullStack/src/test/java/io/agileintelligence/ppmtool/PpmtoolApplicationTests.java.
+The file will have its original line endings in your working directory
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (master)
+$ git commit -m "first commit"
+[master (root-commit) 1d6d7d4] first commit
+ 10 files changed, 698 insertions(+)
+ create mode 100644 PPMToolFullStack/.gitignore
+ create mode 100644 PPMToolFullStack/.mvn/wrapper/MavenWrapperDownloader.java
+ create mode 100644 PPMToolFullStack/.mvn/wrapper/maven-wrapper.jar
+ create mode 100644 PPMToolFullStack/.mvn/wrapper/maven-wrapper.properties
+ create mode 100644 PPMToolFullStack/mvnw
+ create mode 100644 PPMToolFullStack/mvnw.cmd
+ create mode 100644 PPMToolFullStack/pom.xml
+ create mode 100644 PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/PpmtoolApplication.java
+ create mode 100644 PPMToolFullStack/src/main/resources/application.properties
+ create mode 100644 PPMToolFullStack/src/test/java/io/agileintelligence/ppmtool/PpmtoolApplicationTests.java
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (master)
+$ git remote add origin https://github.com/kartikdutta28/AgileIntPPMTool.git
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (master)
+$ git push -u origin master
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (27/27), 49.72 KiB | 3.11 MiB/s, done.
+Total 27 (delta 0), reused 0 (delta 0)
+To https://github.com/kartikdutta28/AgileIntPPMTool.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (master)
+$ git branch
+* master
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (master)
+$ git branch branch0
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (master)
+$ git branch
+  branch0
+* master
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (master)
+$ git checkout branch0
+Switched to branch 'branch0'
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git branch
+* branch0
+  master
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git add .
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git commit -m "Project Object"
+[branch0 336d04a] Project Object
+ 1 file changed, 4 insertions(+)
+ create mode 100644 PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/domain/Project.java
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git push
+fatal: The current branch branch0 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin branch0
+
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ ^C
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$  git push --set-upstream origin branch0
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (11/11), 799 bytes | 266.00 KiB/s, done.
+Total 11 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'branch0' on GitHub by visiting:
+remote:      https://github.com/kartikdutta28/AgileIntPPMTool/pull/new/branch0
+remote:
+To https://github.com/kartikdutta28/AgileIntPPMTool.git
+ * [new branch]      branch0 -> branch0
+Branch 'branch0' set up to track remote branch 'branch0' from 'origin'.
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (master)
+$ git merge branch0
+Updating 1d6d7d4..336d04a
+Fast-forward
+ .../src/main/java/io/agileintelligence/ppmtool/domain/Project.java    | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/domain/Project.java
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/kartikdutta28/AgileIntPPMTool.git
+   1d6d7d4..336d04a  master -> master
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (master)
+$ git checkout branch0
+Switched to branch 'branch0'
+M       PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/domain/Project.java
+A       PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/repositories/ProjectRepository.java
+A       PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/services/MapValidationErrorService.java
+A       PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/services/ProjectService.java
+A       PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/web/ProjectController.java
+M       PPMToolFullStack/src/main/resources/application.properties
+Your branch is up to date with 'origin/branch0'.
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git add .
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git commit -m "Validations added"
+[branch0 bf58997] Validations added
+ 6 files changed, 196 insertions(+), 1 deletion(-)
+ create mode 100644 PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/repositories/ProjectRepository.java
+ create mode 100644 PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/services/MapValidationErrorService.java
+ create mode 100644 PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/services/ProjectService.java
+ create mode 100644 PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/web/ProjectController.java
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git push
+Enumerating objects: 32, done.
+Counting objects: 100% (32/32), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (20/20), 3.06 KiB | 447.00 KiB/s, done.
+Total 20 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/kartikdutta28/AgileIntPPMTool.git
+   336d04a..bf58997  branch0 -> branch0
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git add .
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git commit -m "Added Exceptions"
+[branch0 639445d] Added Exceptions
+ 5 files changed, 59 insertions(+), 5 deletions(-)
+ create mode 100644 PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/exceptions/CustomResponseEntityExceptionHandler.java
+ create mode 100644 PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/exceptions/ProjectIdException.java
+ create mode 100644 PPMToolFullStack/src/main/java/io/agileintelligence/ppmtool/exceptions/ProjectIdExceptionResponse.java
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git push
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (17/17), 1.96 KiB | 402.00 KiB/s, done.
+Total 17 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), completed with 4 local objects.
+To https://github.com/kartikdutta28/AgileIntPPMTool.git
+   bf58997..639445d  branch0 -> branch0
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git branch
+* branch0
+  master
+
+Kartike Dutta@DESKTOP-H5RQQHO MINGW64 ~/Desktop/PPMToolFullStackReact+Java (branch0)
+$ git status
+On branch branch0
+Your branch is up to date with 'origin/branch0'.
+
+nothing to commit, working tree clean
+
