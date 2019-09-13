@@ -16,7 +16,8 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/project")
-public class ProjectController  {
+@CrossOrigin
+public class ProjectController {
 
     @Autowired
     private ProjectService projectService;
@@ -25,24 +26,28 @@ public class ProjectController  {
     private MapValidationErrorService mapValidationErrorService;
 
     @PostMapping("")
-    public ResponseEntity<?> createNewProject(@Valid @RequestBody Project project, BindingResult result){
-        ResponseEntity<?>errorMap=mapValidationErrorService.MapValidationService(result);
-        if(errorMap!=null)return errorMap;
-        Project project1=projectService.saveOrUpdateProject(project);
+    public ResponseEntity<?> createNewProject(@Valid @RequestBody Project project, BindingResult result) {
+        ResponseEntity<?> errorMap = mapValidationErrorService.MapValidationService(result);
+        if (errorMap != null)
+            return errorMap;
+        Project project1 = projectService.saveOrUpdateProject(project);
         return new ResponseEntity<Project>(project, HttpStatus.CREATED);
     }
+
     @GetMapping("/{projectId}")
-    public ResponseEntity<?>getProjectById(@PathVariable String projectId){
-        Project project=projectService.findProjectByIdentifier(projectId);
-        return new ResponseEntity<Project>(project,HttpStatus.OK);
+    public ResponseEntity<?> getProjectById(@PathVariable String projectId) {
+        Project project = projectService.findProjectByIdentifier(projectId);
+        return new ResponseEntity<Project>(project, HttpStatus.OK);
     }
+
     @GetMapping("/all")
-    public Iterable<Project>getAllProjects(){
+    public Iterable<Project> getAllProjects() {
         return projectService.findAllProjects();
     }
+
     @DeleteMapping("/{projectId}")
-    public ResponseEntity<?>deleteProject(@PathVariable String projectId){
+    public ResponseEntity<?> deleteProject(@PathVariable String projectId) {
         projectService.deleteProjectByIdentifier(projectId);
-        return new ResponseEntity<String>("Project With Id '"+projectId+"' deleted successfully",HttpStatus.OK);
+        return new ResponseEntity<String>("Project With Id '" + projectId + "' deleted successfully", HttpStatus.OK);
     }
 }
