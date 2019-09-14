@@ -7,6 +7,8 @@ import io.agileintelligence.ppmtool.repositories.ProjectTaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProjectTaskService {
     @Autowired
@@ -20,15 +22,19 @@ public class ProjectTaskService {
         projectTask.setBacklog(backlog);
         Integer BacklogSequence=backlog.getPTSequence();
         BacklogSequence++;
+        backlog.setPTSequence(BacklogSequence);
         projectTask.setProjectSequence(backlog.getProjectIdentifier()+"-"+BacklogSequence);
         projectTask.setProjectIdentifier(projectIdentifier);
-//        if(projectTask.getPriority()==0||projectTask.getPriority()==null){
-//            projectTask.setPriority(3);
-//        }
+        if(projectTask.getPriority()==null){
+            projectTask.setPriority(3);
+        }
         if(projectTask.getStatus()==""||projectTask.getStatus()==null){
             projectTask.setStatus("TO-DO");
         }
         return projectTaskRepository.save(projectTask);
     }
 
+     public Iterable<ProjectTask> findBacklogById(String id) {
+        return projectTaskRepository.findByProjectIdentifierOrderByPriority(id);
+    }
 }

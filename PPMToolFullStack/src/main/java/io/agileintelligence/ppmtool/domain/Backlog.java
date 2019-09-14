@@ -1,12 +1,15 @@
 package io.agileintelligence.ppmtool.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+
 public class Backlog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
