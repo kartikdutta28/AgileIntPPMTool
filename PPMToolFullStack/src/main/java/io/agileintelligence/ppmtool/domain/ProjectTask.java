@@ -1,8 +1,6 @@
 package io.agileintelligence.ppmtool.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -23,7 +21,7 @@ public class ProjectTask {
     private Date dueDate;
 
     //ManyToOne With Backlog
-    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.REFRESH)
+    @ManyToOne(fetch = FetchType.EAGER) //REMOVE REFRESH
     @JoinColumn(name = "backlog_id",updatable = false,nullable = false)
     @JsonIgnore
     private Backlog backlog;

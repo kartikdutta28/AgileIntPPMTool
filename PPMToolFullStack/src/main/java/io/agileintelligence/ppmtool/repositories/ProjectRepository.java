@@ -2,7 +2,6 @@ package io.agileintelligence.ppmtool.repositories;
 
 import io.agileintelligence.ppmtool.domain.Project;
 import io.agileintelligence.ppmtool.exceptions.ProjectIdException;
-import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
