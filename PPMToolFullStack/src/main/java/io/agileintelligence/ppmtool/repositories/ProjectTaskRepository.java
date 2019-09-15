@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface ProjectTaskRepository extends CrudRepository<ProjectTask,Long> {
     Iterable<ProjectTask> findByProjectIdentifierOrderByPriority(String id);
+    ProjectTask findByProjectSequence(String sequence);
 }
