@@ -20,6 +20,7 @@ public class ProjectTask {
     private Integer priority;
     private Date dueDate;
 
+
     //ManyToOne With Backlog
     @ManyToOne(fetch = FetchType.EAGER) //REMOVE REFRESH
     @JoinColumn(name = "backlog_id",updatable = false,nullable = false)
