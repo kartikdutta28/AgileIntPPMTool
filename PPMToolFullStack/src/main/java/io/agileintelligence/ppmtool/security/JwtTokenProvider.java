@@ -1,9 +1,7 @@
 package io.agileintelligence.ppmtool.security;
 
 import io.agileintelligence.ppmtool.domain.User;
-import io.jsonwebtoken.JwtBuilder;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
@@ -36,6 +34,28 @@ public class JwtTokenProvider {
                 .compact();
     }
     //Validate the token
-
+    public boolean validateToken(String token){
+        try{
+            Jwts.parser().setSigningKey(SECRET).parseClaimsJws(token);
+            return true;
+        }catch (SignatureException ex){
+            System.out.println("Invalid Jwt signature");
+        }catch (MalformedJwtException ex){
+            System.out.println("Invalid Jwt Token");
+        }catch (ExpiredJwtException ex){
+            System.out.println("Expired Jwt Token");
+        }catch (UnsupportedJwtException ex){
+            System.out.println("Token unsupported");
+        }catch (IllegalArgumentException ex){
+            System.out.println("Jwt claims string is empty");
+        }
+        return false;
+    }
     //Get user Id from token
+    public Long getUserIdFromJWT(String token){
+        Claims claims = Jwts.parser().setSigningKey(SECRET).parseClaimsJws(token).getBody();
+        String id = (String)claims.get("id");
+
+        return Long.parseLong(id);
+    }
 }
