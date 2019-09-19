@@ -13,5 +13,7 @@ public interface ProjectRepository extends CrudRepository<Project,Long> {
     @Override
     List<Project> findAll();
 
+    Iterable<Project>findAllByProjectLeader(String username);
+
     //Delete methods in service and controller layer only
 }
