@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-=======
-
->>>>>>> branch6
 class Header extends Component {
   render() {
     return (
