@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-
-class Landing extends Component {
-=======
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
@@ -13,7 +9,6 @@ class Landing extends Component {
       this.props.history.push("/dashboard");
     }
   }
->>>>>>> branch8
   render() {
     return (
       <div className="landing">
@@ -43,9 +38,6 @@ class Landing extends Component {
   }
 }
 
-<<<<<<< HEAD
-export default Landing;
-=======
 Landing.propTypes = {
   security: PropTypes.object.isRequired
 };
@@ -55,4 +47,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(Landing);
->>>>>>> branch8

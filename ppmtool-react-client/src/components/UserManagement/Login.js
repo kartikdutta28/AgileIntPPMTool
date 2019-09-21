@@ -90,9 +90,6 @@ class Login extends Component {
   }
 }
 
-<<<<<<< HEAD
-export default Login;
-=======
 Login.propTypes = {
   login: PropTypes.func.isRequired,
   errors: PropTypes.object.isRequired,
@@ -108,4 +105,3 @@ export default connect(
   mapStateToProps,
   { login }
 )(Login);
->>>>>>> branch8
