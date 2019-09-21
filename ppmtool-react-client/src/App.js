@@ -1,3 +1,4 @@
+//BUG FIXES
 import React, { Component } from "react";
 import "./App.css";
 import Dashboard from "./components/Dashboard";
